@@ -13,3 +13,5 @@
 /png/*.png
 tags
 unix-tools/sf*
+.vscode
+.travis
