@@ -1,5 +1,0 @@
-1 secho ../test-data/hello
-2 paste ../test-data/world
-
-%
-socketpipe 1 2

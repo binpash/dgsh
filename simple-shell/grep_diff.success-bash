@@ -1,4 +1,0 @@
-1c1
-< ../test-data/F:not
----
-> ../test-data/ff:match

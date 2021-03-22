@@ -1,6 +1,0 @@
-../test-data/ff:match
-	../test-data/F:not
-1c1
-< ../test-data/ff
----
-> ../test-data/F

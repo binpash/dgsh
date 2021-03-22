@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "dgsh-debug.h": "c",
+        "dgsh.h": "c",
+        "negotiate.h": "c"
+    }
+}

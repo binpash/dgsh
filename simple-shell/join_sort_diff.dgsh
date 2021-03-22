@@ -1,7 +1,0 @@
-1 join ../test-data/f1s ../test-data/f2s
-2 sort
-3 diff ../test-data/f3s
-
-%
-socketpipe 1 2
-socketpipe 2 3

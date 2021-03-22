@@ -1,5 +1,0 @@
-1 grep -l -L match ../test-data/ff ../test-data/F
-2 comm
-
-%
-socketpipe 1 2
