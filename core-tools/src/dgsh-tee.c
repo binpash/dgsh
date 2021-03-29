@@ -589,7 +589,7 @@ source_read(struct source_info *ifp)
 		/* Provide some time for the output to drain. */
 		return read_oom;
 	}
-	if ((n = read(ifp->fd, b.p, b.size)) == -1)
+	if ((n = read(ifp->fd, b.p, MIN(b.size, 4*BUFSIZ))) == -1)
 		switch (errno) {
 		case EAGAIN:
 			DPRINTF(4, "EAGAIN on %s", fp_name(ifp));
@@ -1456,10 +1456,11 @@ main(int argc, char *argv[])
 				*/
 				if (state == drain_ob)
 					state = write_ob;
-				continue;
+				if (reached_eof)
+					continue;
 			}
 		}
-		
+
 		if (reached_eof) {
 			int active_fds = 0;
 
