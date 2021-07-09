@@ -289,6 +289,9 @@ page_out(struct buffer_pool *bp)
 		strcat(template, "XXXXXX");
 		if ((bp->page_file_fd = mkstemp(template)) == -1)
 			err(1, "Unable to create temporary file %s", template);
+			
+		// unlink the filename so it gets deleted once the descriptor is closed
+		unlink(template);
 	}
 
 	/*
